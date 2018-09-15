@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import createHistory from 'history/createBrowserHistory';
 import { Router, Switch, Route } from 'react-router-dom';
 import CalculateContainers from './containers/CalculateContainers.js';
+import currentСurrency from './hoc/currentСurrency';
+import SwitchCurrency from './components/blocks/SwitchCurrency/SwitchCurrency';
 import './static/css/main.css';
 
 const history = createHistory();
@@ -13,11 +15,11 @@ class App extends Component {
         <Switch>
           <Route
             path='/'
-            component={CalculateContainers}
+            component={currentСurrency(CalculateContainers, SwitchCurrency)}
           />
           <Route 
             path='/home'
-            component={CalculateContainers}
+            component={currentСurrency(CalculateContainers, SwitchCurrency)}
           />
         </Switch>
       </Router>

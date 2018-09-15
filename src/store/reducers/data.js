@@ -6,11 +6,11 @@ const initialState = {
      data: {},
 };
 
-const currency = (state = initialState, action) => {
+const data = (state = initialState, action) => {
    switch (action.type) {
        case GET_DATA:
           return {
-            data: action.payload.data,
+            data: { ...action.payload },
           };
        default:
            break;
@@ -19,4 +19,4 @@ const currency = (state = initialState, action) => {
    return state;
 };
 
-export default currency;
+export default data;

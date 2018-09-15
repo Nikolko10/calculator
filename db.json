@@ -1,47 +1,94 @@
 {
-	"usd": {
-		"currency": "USD",
-		"data": [
-			{
-				"range_month": {
-					"min": 3,
-					"max": 5
+	"data": {
+		"usd": {
+			"currency": "USD",
+			"data": [
+				{
+					"range_month": {
+						"min": 3,
+						"max": 5
+					},
+					"percent": {
+						"monthly": 12,
+						"last": 13
+					}
 				},
-				"percent": {
-					"monthly": 12,
-					"last": 13
-				}
-			},
-			{
-				"range_month": {
-					"min": 6,
-					"max": 11
+				{
+					"range_month": {
+						"min": 6,
+						"max": 11
+					},
+					"percent": {
+						"monthly": 16,
+						"last": 17
+					}
 				},
-				"percent": {
-					"monthly": 16,
-					"last": 17
-				}
-			},
-			{
-				"range_month": {
-					"min": 12,
-					"max": 23
+				{
+					"range_month": {
+						"min": 12,
+						"max": 23
+					},
+					"percent": {
+						"monthly": 18,
+						"last": 20
+					}
 				},
-				"percent": {
-					"monthly": 18,
-					"last": 20
+				{
+					"range_month": {
+						"min": 36,
+						"max": 36
+					},
+					"percent": {
+						"monthly": 20,
+						"last": 22
+					}
 				}
-			},
-			{
-				"range_month": {
-					"min": 36,
-					"max": 36
+			]
+		},
+		"uah": {
+			"currency": "UAH",
+			"data": [
+				{
+					"range_month": {
+						"min": 3,
+						"max": 5
+					},
+					"percent": {
+						"monthly": 12,
+						"last": 13
+					}
 				},
-				"percent": {
-					"monthly": 20,
-					"last": 22
+				{
+					"range_month": {
+						"min": 6,
+						"max": 11
+					},
+					"percent": {
+						"monthly": 16,
+						"last": 17
+					}
+				},
+				{
+					"range_month": {
+						"min": 12,
+						"max": 23
+					},
+					"percent": {
+						"monthly": 18,
+						"last": 20
+					}
+				},
+				{
+					"range_month": {
+						"min": 36,
+						"max": 36
+					},
+					"percent": {
+						"monthly": 20,
+						"last": 22
+					}
 				}
-			}
-		]
+			]
+		}
 	}
 }
