@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import SliderQuantity from '../components/common/SliderQuantity/SliderQuantity';
 
 class CalculateContainers extends Component {
-	render() {
-		console.log(this.props);
-		return <div>dvsvs</div>;
-	}
+  render() {
+  return (
+    <div>
+      <SliderQuantity />
+      <SliderQuantity />
+    </div>
+    );
+  }
 }
 
 CalculateContainers.propTypes = {
