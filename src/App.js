@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import createHistory from 'history/createBrowserHistory';
 import { Router, Switch, Route } from 'react-router-dom';
 import CalculateContainers from './containers/CalculateContainers.js';
-import './App.css';
+import './static/css/main.css';
 
 const history = createHistory();
 
@@ -15,7 +15,7 @@ class App extends Component {
             path='/'
             component={CalculateContainers}
           />
-          <Route
+          <Route 
             path='/home'
             component={CalculateContainers}
           />
