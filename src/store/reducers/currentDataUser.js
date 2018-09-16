@@ -10,8 +10,8 @@ import {
 
 const initialState = {
     currentCurrency: 'UAH',
-    valueMonth: 0,
-    valueAmount: 0,
+    valueMonth: 3,
+    valueAmount: 1000,
     percent: 0,
     monthly: true,
     wholeTerm: 0,

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import SliderQuantity from '../components/common/SliderQuantity/SliderQuantity';
 import PaymentInterest from '../components/common/PaymentInterest/PaymentInterest';
 import PassiveIncome from '../components/common/PassiveIncome/PassiveIncome';
@@ -49,7 +50,9 @@ class CalculateContainers extends Component {
         <PassiveIncome
           everyMonthly={everyMonthly}
           wholeTerm={wholeTerm}
+          currency={data.currency}
         />
+        <button className='invest'><Link to='/results'>Инвестировать</Link></button>
       </div>
       );
     }

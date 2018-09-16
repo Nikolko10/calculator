@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import createHistory from 'history/createBrowserHistory';
-import { Router, Switch, Route } from 'react-router-dom';
-import CalculateContainers from './containers/CalculateContainers.js';
-import currentСurrency from './hoc/currentСurrency';
-import SwitchCurrency from './components/blocks/SwitchCurrency/SwitchCurrency';
+import { BrowserRouter } from 'react-router-dom';
+import { Router, HashRouter } from 'react-router-dom';
+import MainRoutes from './routes/MainRoutes';
 import './static/css/main.css';
 import './static/css/button.css';
 
@@ -13,16 +12,7 @@ class App extends Component {
   render() {
     return (
       <Router history={history}>
-        <Switch>
-          <Route
-            path='/'
-            component={currentСurrency(CalculateContainers, SwitchCurrency)}
-          />
-          <Route 
-            path='/home'
-            component={currentСurrency(CalculateContainers, SwitchCurrency)}
-          />
-        </Switch>
+        <MainRoutes />
       </Router>
     );
   }

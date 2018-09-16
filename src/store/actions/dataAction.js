@@ -82,10 +82,11 @@ export const setIsMonthly = bool => (dispatch, getState) => {
 };
 
 export const getData = data => (dispatch, getState) => {
+	const { valueAmount, valueMonth } = getState().currentDataUser;
 	axios.get('http://localhost:3001/data').then((response) => {
 		dispatch({ type: GET_DATA, payload: response.data });
-		dispatch(setValueMonth(3)); // first month
-		dispatch(setValueAmount(1000)); // first amount
+		dispatch(setValueMonth(valueMonth)); // first month
+		dispatch(setValueAmount(valueAmount)); // first amount
 		dispatch(monthlyIncome());
 	});
 };
@@ -101,10 +102,10 @@ export const monthlyIncome = () => (dispatch, getState) => {
 		dispatch(setWholeTerm(Math.ceil(whole_term)));
 	}
 	if (!monthly) {
-		amount = Math.pow((valueAmount * ((1 + percent/100)/12)), valueMonth) - valueAmount;
+		amount = valueAmount * (1 + Math.pow((percent/100)/12), valueMonth) - valueAmount;
 		whole_term = amount/12;
-		dispatch(setEveryMonthly(Math.ceil(amount)));
-		dispatch(setWholeTerm(Math.ceil(whole_term)));
+		dispatch(setEveryMonthly(Math.ceil(whole_term)));
+		dispatch(setWholeTerm(Math.ceil(amount)));
 	}
 
 };

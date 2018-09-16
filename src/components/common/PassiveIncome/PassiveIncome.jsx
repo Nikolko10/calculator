@@ -3,17 +3,27 @@ import PropTypes from 'prop-types';
 
 class PassiveIncome extends Component {
   render() {
-  	const { wholeTerm, everyMonthly } = this.props;
+  	const { wholeTerm, everyMonthly, currency } = this.props;
     return (
       <div>
         <h2>Ваш пасивный доход</h2>
-        <div>
-          <p>{wholeTerm}</p>
-          <p className='small_text'>за весь срок вложения</p>
-        </div>
-        <div>
-          <p>{everyMonthly}</p>
-          <p className='small_text'>ежемесячно</p>
+        <div className='passive'>
+          <div>
+            <p>
+              {currency === 'UAH' ? 
+              `₴${(wholeTerm + '').replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ')}` : currency ? 
+              `$${(wholeTerm + '').replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ')}` : ''}
+            </p>
+            <p className='small_text'>за весь срок вложения</p>
+          </div>
+          <div>
+            <p>
+              {currency === 'UAH' ? 
+              `₴${(everyMonthly + '').replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ')}` : currency ? 
+              `$${(everyMonthly + '').replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ')}` : ''}
+            </p>
+            <p className='small_text'>ежемесячно</p>
+          </div>
         </div>
       </div>
     );
