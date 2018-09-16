@@ -6,16 +6,20 @@ class PaymentInterest extends Component {
   render() {
   	const { setIsMonthly, monthly } = this.props;
     return (
-      <div>
+      <div className='flex_block'>
         <p>Выплата процентов</p>
-        <ButtonPercent
-          active={monthly ? true : false} text='ежемесячно'
-          onClick={() => { setIsMonthly(true); }}
-        />
-        <ButtonPercent
-          active={monthly ? false : true} text='в конце срока'
-          onClick={() => { setIsMonthly(false); }}
-        />
+        <div>
+          <ButtonPercent
+            active={monthly ? true : false} text='ежемесячно'
+            onClick={() => { setIsMonthly(true); }}
+            className='button'
+          />
+          <ButtonPercent
+            active={monthly ? false : true} text='в конце срока'
+            onClick={() => { setIsMonthly(false); }}
+            className='button'
+          />
+        </div>
       </div>
     );
   }

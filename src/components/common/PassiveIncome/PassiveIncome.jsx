@@ -6,14 +6,14 @@ class PassiveIncome extends Component {
   	const { wholeTerm, everyMonthly } = this.props;
     return (
       <div>
-        <p>Ваш пасивный доход</p>
+        <h2>Ваш пасивный доход</h2>
         <div>
           <p>{wholeTerm}</p>
-          <p>за весь срок вложения</p>
+          <p className='small_text'>за весь срок вложения</p>
         </div>
         <div>
           <p>{everyMonthly}</p>
-          <p>ежемесячно</p>
+          <p className='small_text'>ежемесячно</p>
         </div>
       </div>
     );

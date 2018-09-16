@@ -5,8 +5,12 @@ class InterestRate extends Component {
   render() {
   	const { percent } = this.props;
     return (
-      <div>
-        <p>Процентная ставка: {`${percent}%`}</p>
+      <div className='flex_block'>
+        <p>Процентная ставка:</p>
+        <div>
+          <p>{`${percent}%`}</p>
+          <p className='small_text'>зависит от срока, валюты и формата выплаты процентов</p>
+        </div>
       </div>
     );
   }

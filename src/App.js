@@ -5,6 +5,7 @@ import CalculateContainers from './containers/CalculateContainers.js';
 import currentСurrency from './hoc/currentСurrency';
 import SwitchCurrency from './components/blocks/SwitchCurrency/SwitchCurrency';
 import './static/css/main.css';
+import './static/css/button.css';
 
 const history = createHistory();
 

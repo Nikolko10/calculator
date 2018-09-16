@@ -76,8 +76,8 @@ export default class SliderQuantity extends Component {
           	'fontSize': '14px',
           }}
           >
-            <div>{min}</div>
-            <div>{max}</div>
+            <div className='small_text'>{currency === 'UAH' ? `₴${min}` : currency ? `$${min}` : `${min} мес`}</div>
+            <div className='small_text'>{currency === 'UAH' ? `₴${max}` : currency ? `$${max}` : `${max} мес`}</div>
           </div>
         </div>
       </div>
