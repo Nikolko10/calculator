@@ -45,22 +45,24 @@ export default function (ComponentContainer, ComponentSwitch) {
 
       return Object.keys(data).length !== 0 ? (
         <Fragment>
-          <ComponentSwitch 
-            currentCurrency={currentCurrency}
-            changeCurrency={this.changeCurrency} 
-          />
-          <ComponentContainer 
-            data={currentCurrency === 'UAH' ? data.uah : data.usd}
-            setValueAmount={setValueAmount}
-            setValueMonth={setValueMonth}
-            valueAmount={valueAmount}
-            valueMonth={valueMonth}
-            setIsMonthly={setIsMonthly}
-            monthly={monthly}
-            percent={percent}
-            wholeTerm={wholeTerm}
-            everyMonthly={everyMonthly}
-          />
+          <div className='main'>
+            <ComponentSwitch 
+              currentCurrency={currentCurrency}
+              changeCurrency={this.changeCurrency} 
+            />
+            <ComponentContainer 
+              data={currentCurrency === 'UAH' ? data.uah : data.usd}
+              setValueAmount={setValueAmount}
+              setValueMonth={setValueMonth}
+              valueAmount={valueAmount}
+              valueMonth={valueMonth}
+              setIsMonthly={setIsMonthly}
+              monthly={monthly}
+              percent={percent}
+              wholeTerm={wholeTerm}
+              everyMonthly={everyMonthly}
+            />
+          </div>
         </Fragment>
       ) : <div>Loading...</div>;
     }

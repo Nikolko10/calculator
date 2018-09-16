@@ -47,7 +47,7 @@ export const setValueMonth = value => (dispatch, getState) => {
 	let percent = 0;
 
 	var getCurrentCurrencyData = data[currentCurrency.toLowerCase()];
-	console.log(data);
+
 	getCurrentCurrencyData.data.some((item) => {
 		if (item.range_month.min <= value && item.range_month.max >= value) {
 			percent = monthly ? item.percent.monthly : item.percent.last;
@@ -97,14 +97,14 @@ export const monthlyIncome = () => (dispatch, getState) => {
 	if (monthly) {
 		amount = (valueAmount * percent/100)/12;
 		whole_term = amount * valueMonth;
-		dispatch(setEveryMonthly(amount));
-		dispatch(setWholeTerm(whole_term));
+		dispatch(setEveryMonthly(Math.ceil(amount)));
+		dispatch(setWholeTerm(Math.ceil(whole_term)));
 	}
 	if (!monthly) {
 		amount = Math.pow((valueAmount * ((1 + percent/100)/12)), valueMonth) - valueAmount;
 		whole_term = amount/12;
-		dispatch(setEveryMonthly(amount));
-		dispatch(setWholeTerm(whole_term));
+		dispatch(setEveryMonthly(Math.ceil(amount)));
+		dispatch(setWholeTerm(Math.ceil(whole_term)));
 	}
 
 };

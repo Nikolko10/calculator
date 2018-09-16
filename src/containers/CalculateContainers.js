@@ -23,6 +23,7 @@ class CalculateContainers extends Component {
     return (
       <div>
         <SliderQuantity
+          currency={data.currency}
           min={1000}
           max={100000}
           step={1000}

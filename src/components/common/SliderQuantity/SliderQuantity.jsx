@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Slider, { createSliderWithTooltip } from 'rc-slider';
 import Tooltip from 'rc-tooltip';
 import 'rc-slider/assets/index.css';
@@ -22,8 +23,8 @@ const handle = (props) => {
   );
 };
 
-function percentFormatter(v) {
-  return `$${v}`;
+function percentFormatter(v, currency) {
+  return currency === 'UAH' ? `₴${v}` : currency ? `$${v}` : v;
 }
 
 export default class SliderQuantity extends Component {
@@ -41,7 +42,7 @@ export default class SliderQuantity extends Component {
     });
   }
   render() {
-  	const { min, max, step, text, value, onChange } = this.props;
+  	const { min, max, step, text, value, onChange, currency } = this.props;
     return (
       <div style={{ display: 'flex', width: 400 }}>
         <p style={{ flexGrow: 1 }}>{text}</p>
@@ -49,8 +50,12 @@ export default class SliderQuantity extends Component {
           <SliderWithTooltip 
             value={this.state.value}
             step={step}
-            tipFormatter={percentFormatter}
+            tipFormatter={v => percentFormatter(v, currency)}
             onChange={this.handleChange}
+            tipProps={{
+              placement: 'top',
+              visible: true,
+            }}
             dotStyle={{
                 borderColor: '#f1f1f1',
                 backgroundColor: '#eeeeee',
@@ -79,3 +84,11 @@ export default class SliderQuantity extends Component {
         );
 	}
 }
+
+SliderQuantity.defaultProps = {
+  currency: '',
+};
+
+SliderQuantity.propTypes = {
+  currency: PropTypes.string.isRequired,
+};
