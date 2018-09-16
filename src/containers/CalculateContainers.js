@@ -16,6 +16,8 @@ class CalculateContainers extends Component {
         setIsMonthly,
         monthly,
         percent,
+        everyMonthly,
+        wholeTerm,
   	} = this.props;
 
     return (
@@ -43,7 +45,10 @@ class CalculateContainers extends Component {
         <InterestRate
           percent={percent}
         />
-        <PassiveIncome />
+        <PassiveIncome
+          everyMonthly={everyMonthly}
+          wholeTerm={wholeTerm}
+        />
       </div>
       );
     }

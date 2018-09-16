@@ -4,6 +4,8 @@ import {
     CHANGE_CURRENCY,
     SET_PERCENT,
     SET_IS_MONTHLY,
+    SET_WHOLE_TERM,
+    SET_EVERY_MONTHLY,
 } from '../constants/currencyTypes';
 
 const initialState = {
@@ -12,6 +14,8 @@ const initialState = {
     valueAmount: 0,
     percent: 0,
     monthly: true,
+    wholeTerm: 0,
+    everyMonthly: 0,
 };
 
 const currentDataUser = (state = initialState, action) => {
@@ -40,6 +44,16 @@ const currentDataUser = (state = initialState, action) => {
         return {
           ...state,
           monthly: action.payload,
+        };
+      case SET_WHOLE_TERM:
+        return {
+          ...state,
+          wholeTerm: action.payload,
+        };
+      case SET_EVERY_MONTHLY:
+        return {
+          ...state,
+          everyMonthly: action.payload,
         };
       default:
           break;

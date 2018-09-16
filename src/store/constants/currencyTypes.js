@@ -4,3 +4,5 @@ export const SET_VALUE_MONTH = 'SET_VALUE_MONTH';
 export const CHANGE_CURRENCY = 'CHANGE_CURRENCY';
 export const SET_PERCENT = 'SET_PERCENT';
 export const SET_IS_MONTHLY = 'SET_IS_MONTHLY';
+export const SET_WHOLE_TERM = 'SET_WHOLE_TERM';
+export const SET_EVERY_MONTHLY = 'SET_EVERY_MONTHLY';

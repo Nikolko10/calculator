@@ -39,6 +39,8 @@ export default function (ComponentContainer, ComponentSwitch) {
         setIsMonthly,
         monthly,
         percent,
+        wholeTerm,
+		everyMonthly,
       } = this.props;
 
       return Object.keys(data).length !== 0 ? (
@@ -56,6 +58,8 @@ export default function (ComponentContainer, ComponentSwitch) {
             setIsMonthly={setIsMonthly}
             monthly={monthly}
             percent={percent}
+            wholeTerm={wholeTerm}
+            everyMonthly={everyMonthly}
           />
         </Fragment>
       ) : <div>Loading...</div>;
@@ -64,14 +68,18 @@ export default function (ComponentContainer, ComponentSwitch) {
   
   const mapStateToProps = (state) => {
     const { data } = state.data;
+
     const { 
-    	valueMonth, 
-    	valueAmount, 
-    	currentDataUser,
-    	currentCurrency,
-    	monthly,
-    	percent,
+      valueMonth, 
+      valueAmount, 
+      currentDataUser,
+      currentCurrency,
+      monthly,
+      percent,
+      wholeTerm,
+	  everyMonthly,
     } = state.currentDataUser;
+
     return {
       data,
       valueMonth,
@@ -80,6 +88,8 @@ export default function (ComponentContainer, ComponentSwitch) {
       currentCurrency,
       monthly,
       percent,
+      wholeTerm,
+      everyMonthly,
     };
   };
   
