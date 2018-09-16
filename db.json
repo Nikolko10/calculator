@@ -35,6 +35,16 @@
 				},
 				{
 					"range_month": {
+						"min": 24,
+						"max": 35
+					},
+					"percent": {
+						"monthly": 19,
+						"last": 21
+					}
+				},
+				{
+					"range_month": {
 						"min": 36,
 						"max": 36
 					},
@@ -54,8 +64,8 @@
 						"max": 5
 					},
 					"percent": {
-						"monthly": 12,
-						"last": 13
+						"monthly": 21,
+						"last": 22
 					}
 				},
 				{
@@ -64,8 +74,8 @@
 						"max": 11
 					},
 					"percent": {
-						"monthly": 16,
-						"last": 17
+						"monthly": 23,
+						"last": 24
 					}
 				},
 				{
@@ -74,8 +84,18 @@
 						"max": 23
 					},
 					"percent": {
-						"monthly": 18,
-						"last": 20
+						"monthly": 25,
+						"last": 27
+					}
+				},
+				{
+					"range_month": {
+						"min": 24,
+						"max": 35
+					},
+					"percent": {
+						"monthly": 28,
+						"last": 30
 					}
 				},
 				{
@@ -84,8 +104,8 @@
 						"max": 36
 					},
 					"percent": {
-						"monthly": 20,
-						"last": 22
+						"monthly": 31,
+						"last": 33
 					}
 				}
 			]

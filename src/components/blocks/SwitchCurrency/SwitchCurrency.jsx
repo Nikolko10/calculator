@@ -4,12 +4,20 @@ import Button from '../../common/Button/Button';
 
 class SwitchCurrency extends Component {
   render() {
-  	const { changeCurrency } = this.props;
+  	const { changeCurrency, currentCurrency } = this.props;
 
     return (
       <div>
-        <Button text='USD' onClick={() => changeCurrency('USD')} />
-        <Button text='UAH' onClick={() => changeCurrency('UAH')} />
+        <Button 
+          active={currentCurrency === 'USD' ? true : false} 
+          text='USD' 
+          onClick={() => changeCurrency('USD')} 
+        />
+        <Button 
+          active={currentCurrency === 'UAH' ? true : false} 
+          text='UAH' 
+          onClick={() => changeCurrency('UAH')} 
+        />
       </div>
     );
   }

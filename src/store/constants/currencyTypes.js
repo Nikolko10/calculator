@@ -1,1 +1,6 @@
 export const GET_DATA = 'GET_DATA';
+export const SET_VALUE_AMOUNT = 'SET_VALUE_AMOUNT';
+export const SET_VALUE_MONTH = 'SET_VALUE_MONTH';
+export const CHANGE_CURRENCY = 'CHANGE_CURRENCY';
+export const SET_PERCENT = 'SET_PERCENT';
+export const SET_IS_MONTHLY = 'SET_IS_MONTHLY';

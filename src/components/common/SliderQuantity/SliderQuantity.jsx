@@ -27,19 +27,30 @@ function percentFormatter(v) {
 }
 
 export default class SliderQuantity extends Component {
+  constructor(props) {
+  	super(props);
+
+  	this.state = {
+  		value: this.props.value,
+  	};
+  }
+
   handleChange = (value) => {
-    console.log(value);
+    this.setState({ value }, () => {
+    	this.props.onChange(value);
+    });
   }
   render() {
-  	const { min, max, step, text } = this.props;
+  	const { min, max, step, text, value, onChange } = this.props;
     return (
       <div style={{ display: 'flex', width: 400 }}>
         <p style={{ flexGrow: 1 }}>{text}</p>
         <div style={style}>
           <SliderWithTooltip 
-            // value={0}
+            value={this.state.value}
             step={step}
             tipFormatter={percentFormatter}
+            onChange={this.handleChange}
             dotStyle={{
                 borderColor: '#f1f1f1',
                 backgroundColor: '#eeeeee',
