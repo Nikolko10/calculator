@@ -1,10 +1,7 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import ButtonPercent from '../ButtonPercent/ButtonPercent';
+import React from 'react';
+import ButtonPercent from '../../common/ButtonPercent/ButtonPercent';
 
-class PaymentInterest extends Component {
-  render() {
-  	const { setIsMonthly, monthly } = this.props;
+export default function({ setIsMonthly, monthly }) {
     return (
       <div className='flex_block'>
         <p>Выплата процентов</p>
@@ -22,7 +19,4 @@ class PaymentInterest extends Component {
         </div>
       </div>
     );
-  }
 }
-
-export default PaymentInterest;

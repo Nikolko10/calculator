@@ -41,6 +41,12 @@ const mapDispatchToProps = dispatch => ({
 
 export default connect(mapStateToProps, mapDispatchToProps)(ResultsContainer);
 
-// ResultsContainer.propTypes = {
-//  data: PropTypes.object.isRequired,
-// };
+ResultsContainer.propTypes = {
+  currentCurrency:PropTypes.string.isRequired,
+  valueMonth: PropTypes.number.isRequired,
+  valueAmount: PropTypes.number.isRequired,
+  percent: PropTypes.number.isRequired,
+  monthlyText: PropTypes.string.isRequired,
+  wholeTerm: PropTypes.number.isRequired,
+  everyMonthly: PropTypes.number.isRequired,
+};

@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class PassiveIncome extends Component {
-  render() {
-  	const { wholeTerm, everyMonthly, currency } = this.props;
+export default function({ wholeTerm, everyMonthly, currency }) {
     return (
       <div>
         <h2>Ваш пасивный доход</h2>
@@ -27,7 +25,4 @@ class PassiveIncome extends Component {
         </div>
       </div>
     );
-  }
 }
-
-export default PassiveIncome;

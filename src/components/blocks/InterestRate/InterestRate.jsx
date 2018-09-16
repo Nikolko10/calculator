@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
-class InterestRate extends Component {
-  render() {
-  	const { percent } = this.props;
+export default function({ percent } ) {
     return (
       <div className='flex_block'>
         <p>Процентная ставка:</p>
@@ -13,7 +10,4 @@ class InterestRate extends Component {
         </div>
       </div>
     );
-  }
 }
-
-export default InterestRate;

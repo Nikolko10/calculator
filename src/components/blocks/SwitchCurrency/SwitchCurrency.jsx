@@ -1,11 +1,7 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import Button from '../../common/Button/Button';
 
-class SwitchCurrency extends Component {
-  render() {
-  	const { changeCurrency, currentCurrency } = this.props;
-
+export default function({ changeCurrency, currentCurrency }) {
     return (
       <div className='flex_block'>
         <h2>Рассчитайте пассивный доход</h2>
@@ -25,7 +21,4 @@ class SwitchCurrency extends Component {
         </div>
       </div>
     );
-  }
 }
-
-export default SwitchCurrency;
